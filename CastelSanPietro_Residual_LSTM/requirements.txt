@@ -1,6 +1,0 @@
-pandas
-numpy
-scikit-learn
-joblib
-matplotlib
-torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
