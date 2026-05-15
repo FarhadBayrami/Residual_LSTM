@@ -4,7 +4,7 @@
 
 Hybrid **Residual Correction LSTM** model that improves the physics-based **TOPKAPI** model by learning the residual error (`Observed - Predicted`).
 
-**Basin**: Casalecchio  
+**Basin**: CastelSanpietro
 **Time Resolution**: Hourly (2013–2026)
 
 ---
