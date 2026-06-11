@@ -44,20 +44,16 @@ The key insight: train an LSTM on the residual `(Observed discharge − TOPKAPI 
 ---
 
 ## ⚙️ Approach
-Observed Discharge
-│
-  ▼
-Residual = Observed − TOPKAPI Predicted
-│
-▼
-┌─────────────┐
-│  LSTM Model │  ← Learns temporal patterns in the error signal
-└──────┬──────┘
-│  Predicted Residual
-▼
-Final Forecast = TOPKAPI + Predicted Residual
-This hybrid approach preserves the physical interpretability of TOPKAPI while leveraging deep learning to correct systematic biases.
 
+| Step | Description |
+|------|-------------|
+| **1. Input** | Observed discharge + TOPKAPI predicted discharge |
+| **2. Residual** | Residual = Observed − TOPKAPI Predicted |
+| **3. LSTM Model** | Learns temporal patterns in the residual error signal |
+| **4. Predicted Residual** | LSTM outputs the corrected error term |
+| **5. Final Forecast** | Final Forecast = TOPKAPI Prediction + Predicted Residual |
+
+This hybrid approach preserves the physical interpretability of TOPKAPI while leveraging deep learning to correct systematic biases.
 ---
 
 ## 📦 Dataset
@@ -148,6 +144,7 @@ python scripts/evaluate_residual.py
 | `CastelSanPietro_Residual_LSTM/scripts/evaluate_residual.py` | Evaluation and visualisation |
 | `requirements.txt` | Python dependencies |
 | `README.md` | Project documentation |
+
 ## 🔮 Future Work
 
 - [ ] Extend to multi-basin generalisation (transfer learning)
