@@ -135,20 +135,19 @@ python scripts/evaluate_residual.py
 
 ## 📁 Project Structure
 
-📦 Residual_LSTM
-┗ 📂 CastelSanPietro_Residual_LSTM
-┣ 📂 data/                          ← Raw data (not included)
-┃  └── 425.sbs.ts
-┣ 📂 results/                       ← CSV predictions and plots
-┣ 📂 models/                        ← Saved model weights and scalers
-┣ 📂 scripts/
-┃  ┣ data_preparation_residual.py   ← Data loading and preprocessing
-┃  ┣ train_residual_lstm.py         ← Model training
-┃  └── evaluate_residual.py         ← Evaluation and visualisation
-┣ 📄 requirements.txt
-┗ 📝 README.md
----
+**`Residual_LSTM/`**
 
+| Path | Description |
+|------|-------------|
+| `CastelSanPietro_Residual_LSTM/data/` | Raw data — not included (large file) |
+| `CastelSanPietro_Residual_LSTM/data/425.sbs.ts` | Raw discharge time series |
+| `CastelSanPietro_Residual_LSTM/results/` | CSV predictions and plots |
+| `CastelSanPietro_Residual_LSTM/models/` | Saved model weights and scalers |
+| `CastelSanPietro_Residual_LSTM/scripts/data_preparation_residual.py` | Data loading and preprocessing |
+| `CastelSanPietro_Residual_LSTM/scripts/train_residual_lstm.py` | Model training |
+| `CastelSanPietro_Residual_LSTM/scripts/evaluate_residual.py` | Evaluation and visualisation |
+| `requirements.txt` | Python dependencies |
+| `README.md` | Project documentation |
 ## 🔮 Future Work
 
 - [ ] Extend to multi-basin generalisation (transfer learning)
